@@ -4,9 +4,17 @@ import os
 #Codificar imagenes en formato base64
 
 def convert_to_image_base64(file_Path):
+    
+    #Mapeo la ruta donde estan almacenadas las imagenes 
+    project_folder = os.getcwd()
+    images_folder = os.path.join(project_folder,"images64")
+    
+    #Ejecuto la codificación de las imagenes   
     with open(file_Path,'rb') as image:
         encoded_image = image.read()
-    image_base64 = base64.encode(encoded_image)
+        image_base64 = base64.b64encode(encoded_image).decode('utf-8')
+    return image_base64
+
 
 
 #Decodificar imagenes de base64 a imagen
