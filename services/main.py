@@ -4,14 +4,14 @@ import conectDB
 import convert_to_image
 import mysql.connector
 
-def loop_convert_base64_to_image():
+def loop_convert_base64_to_image(id_imagen:int):
     
     #Obtengo una conexión a la base de datos MySQL
     connection = conectDB.connection()
     if connection is not None:
         try:
             cursor = connection.cursor()
-            cursor.execute("SELECT image FROM py64image")
+            cursor.execute("SELECT image FROM py64image WHERE id_imagen = %s", (id_imagen,))
             base64_data = cursor.fetchone()
            
             imageAccount = 0
@@ -73,5 +73,5 @@ def loop_convert_to_image_base64(image_name):
 
 
 #Llamado de metodos
-#loop_convert_base64_to_image()
+#loop_convert_base64_to_image(1)
 #loop_convert_to_image_base64("image_name")
