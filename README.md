@@ -4,7 +4,7 @@ Este es un proyecto en Python que te permite convertir imágenes en formato base
 
 <a href="Documentación"><img src="https://img.shields.io/badge/Doc-Actualizada-informational"></a>
 <a href="Status"><img src="https://img.shields.io/badge/Status-Success-success"></a>
-<a href="Lenguaje"><img src="https://img.shields.io/badge/Lenguaje-Java-blue"></a>
+<a href="Lenguaje"><img src="https://img.shields.io/badge/Lenguaje-Python-blue"></a>
 <a href="License"><img src="https://img.shields.io/badge/License-MIT-important"></a>
 
 ## Instalación
